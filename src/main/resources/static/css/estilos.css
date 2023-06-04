@@ -1,0 +1,37 @@
+/* 
+    Author     : Tawnny Elizondo
+*/
+
+#tituloPrincipal{
+    color:red;
+}
+
+.parrafos{
+    text-align: center;
+    color:turquoise;
+    font-weight: bold;
+}
+
+.enfasis{
+    background-color: buttonshadow;
+    color:darkblue;
+}
+
+a{
+    color:magenta;
+}
+
+a:hover{
+    background-color: darkmagenta;
+    color:white;
+}
+a:active{
+    background-color: lightgrey;
+    color:black;
+}
+
+h1,p{
+    /*propiedades en conjunto*/
+    color:darkslategrey;
+     
+}

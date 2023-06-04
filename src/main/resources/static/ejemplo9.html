@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+<!--Etiqueta <input type un_valor ”> ….
+</imput>
+
+Atributos:
+“value ” = le define un valor o se
+obtiene lo que ingresa el usuario
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Ejemplo 9 - Formularios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Ejemplo 9 - Formularios</h1>
+        <a href="ejemplo8.html">Back</a>|
+        <a href="index.html">Home</a>|
+        <a href="audios.html">Next</a><br>
+        <h1 id="tituloPrincipal">Registro de Clientes</h1>
+        <form action="#" method="POST">
+            
+            <label>Nombre</label>
+            <input id="nombre" placeholder="nombre" type="text" name="nombre" value="" size="20"/>
+            <br><!-- espacio entre reglones -->
+            
+            <label>Apellidos</label>
+            <input id="apellidos" placeholder="apellidos" type="text" name="apellidos" value="" size="30"/>
+
+            <br>
+            <label>Correo</label>
+            <input id="correo" placeholder="correo@abc.com" type="email" name="correo" value="" size="15"/>
+            
+            <br>
+            <input type="submit" value="Registrar"/>
+        </form>
+        
+        <p class="parrafos enfasis">Ejemplo de texto 1</p>
+        <p class="parrafos">Ejemplo de texto 2</p>
+        <p class="parrafos">Ejemplo de texto 3</p>
     </body>
 </html>
