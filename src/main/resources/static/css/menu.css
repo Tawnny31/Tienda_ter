@@ -30,11 +30,11 @@ body {
 }
  
 .logo {
-    color: aquamarine;
-    font-size: 30px;
+    color: graytext;
+    font-size: 10px;
     font-weight: bold;
-    padding: 0 40px;
-    line-height: 90px;
+    padding: 0 20px;
+    line-height: 50px;
 }
  
 .nav-menu {
