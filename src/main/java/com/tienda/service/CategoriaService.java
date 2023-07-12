@@ -19,4 +19,5 @@ public interface CategoriaService {
     //eliminar: elimina un registro por idCategoria
     public void delete(Categoria categoria);
     
+    
 }
