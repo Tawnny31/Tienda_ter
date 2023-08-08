@@ -1,4 +1,3 @@
-
 package com.tienda.controller;
 
 import org.springframework.stereotype.Controller;
@@ -29,35 +28,48 @@ public class ReporteController {
 
     @Autowired
     ReporteService reporteService;
-    
+
     @GetMapping("/principal")
     public String principal(Model model) {
-        Calendar fecha=Calendar.getInstance();
-        String fechaIni=""+(fecha.get(Calendar.YEAR)-1)+"-01-01";
-        
-        String strMes=(fecha.get(Calendar.MONTH)<10?"0":"")+
-                fecha.get(Calendar.MONTH);
-        String strDia=(fecha.get(Calendar.DAY_OF_MONTH)<10?"0":"")+
-                fecha.get(Calendar.DAY_OF_MONTH);
-        String fechaFin=""+fecha.get(Calendar.YEAR)+"-"+strMes+"-"+strDia;
-        
+        Calendar fecha = Calendar.getInstance();
+        String fechaIni = "" + (fecha.get(Calendar.YEAR) - 1) + "-01-01";
+
+        String strMes = (fecha.get(Calendar.MONTH) < 10 ? "0" : "")
+                + fecha.get(Calendar.MONTH);
+        String strDia = (fecha.get(Calendar.DAY_OF_MONTH) < 10 ? "0" : "")
+                + fecha.get(Calendar.DAY_OF_MONTH);
+        String fechaFin = "" + fecha.get(Calendar.YEAR) + "-" + strMes + "-" + strDia;
+
         model.addAttribute("fechaInicio", fechaIni);
         model.addAttribute("fechaFin", fechaFin);
         return "/reportes/principal";
     }
 
-    @GetMapping("/usuarios")
-    public ResponseEntity<Resource> reporteClientes(@RequestParam String tipo) 
-            throws IOException {        
-        var reporte = "usuarios";
+    @GetMapping("/clientes")
+    public ResponseEntity<Resource> reporteClientes(@RequestParam String tipo)
+            throws IOException {
+        var reporte = "clientes";
         return reporteService.generaReporte(reporte, null, tipo);
     }
 
-    
     @GetMapping("/ventas")
-    public ResponseEntity<Resource> reporteVentas(@RequestParam String tipo) 
+    public ResponseEntity<Resource> reporteVentas(@RequestParam String tipo)
             throws IOException {
-        var reporte="ventas";
+        var reporte = "ventas";
+        return reporteService.generaReporte(reporte, null, tipo);
+    }
+    
+    @GetMapping("/producto")
+    public ResponseEntity<Resource> reporteProducto(@RequestParam String tipo)
+            throws IOException {
+        var reporte = "producto";
+        return reporteService.generaReporte(reporte, null, tipo);
+    }
+
+    @GetMapping("/inventari")
+    public ResponseEntity<Resource> reporteInventario(@RequestParam String tipo)
+            throws IOException {
+        var reporte = "inventari";
         return reporteService.generaReporte(reporte, null, tipo);
     }
 
@@ -70,7 +82,9 @@ public class ReporteController {
         Map<String, Object> parametros = new HashMap();
         parametros.put("fechaInicio", fechaInicio);
         parametros.put("fechaFin", fechaFin);
-        var reporte="ventasTotales";
+        var reporte = "ventasTotales";
         return reporteService.generaReporte(reporte, parametros, tipo);
     }
+
+    
 }

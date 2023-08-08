@@ -53,6 +53,44 @@
                             <i class='fas fa-download'></i><i class='fas fa-file-csv'></i>
                         </a>
                     </div>
+                </div>
+                <div class="card">
+                    <div class="card-header text-center">
+                        Reporte productos
+                    </div>
+                    <div class="card-body">
+                        <a th:href="@{/reportes/producto?tipo=vPdf}" class="btn btn-primary">
+                            <i class='fas fa-eye'></i><i class='fas fa-file-pdf'></i>
+                        </a>
+                        <a th:href="@{/reportes/producto?tipo=Pdf}" class="btn btn-success">
+                            <i class='fas fa-download'></i><i class='fas fa-file-pdf'></i>
+                        </a>
+                        <a th:href="@{/reportes/producto?tipo=Xls}" class="btn btn-warning">
+                            <i class='fas fa-download'></i><i class='fas fa-file-excel'></i>
+                        </a>
+                        <a th:href="@{/reportes/producto?tipo=Csv}" class="btn btn-danger">
+                            <i class='fas fa-download'></i><i class='fas fa-file-csv'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header text-center">
+                        Reporte Inventario
+                    </div>
+                    <div class="card-body">
+                        <a th:href="@{/reportes/inventari?tipo=vPdf}" class="btn btn-primary">
+                            <i class='fas fa-eye'></i><i class='fas fa-file-pdf'></i>
+                        </a>
+                        <a th:href="@{/reportes/inventari?tipo=Pdf}" class="btn btn-success">
+                            <i class='fas fa-download'></i><i class='fas fa-file-pdf'></i>
+                        </a>
+                        <a th:href="@{/reportes/inventari?tipo=Xls}" class="btn btn-warning">
+                            <i class='fas fa-download'></i><i class='fas fa-file-excel'></i>
+                        </a>
+                        <a th:href="@{/reportes/inventari?tipo=Csv}" class="btn btn-danger">
+                            <i class='fas fa-download'></i><i class='fas fa-file-csv'></i>
+                        </a>
+                    </div>
                 </div>                
                 <div class="card">
                     <div class="card-header text-center">
@@ -107,6 +145,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
